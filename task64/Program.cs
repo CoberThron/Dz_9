@@ -2,6 +2,18 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
+int digit1 = Promt("введите число: ");
+int Promt(string message)
+{
+    System.Console.Write(message);
+    string num = System.Console.ReadLine()!;
+    if ((int.TryParse(num, out int num_n)) == false) 
+    {
+    Console.WriteLine("Это не число!");
+    }
+
+    return num_n;
+}
 void NumbersFromNto1(int n)
 {
     if (n==1)
@@ -16,4 +28,4 @@ void NumbersFromNto1(int n)
     }
        
 }
-NumbersFromNto1(8);
+NumbersFromNto1(digit1);
